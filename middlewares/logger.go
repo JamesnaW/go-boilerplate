@@ -29,14 +29,18 @@ func LoggerFastHttp(handler fasthttp.RequestHandler, name string) fasthttp.Reque
 	return (func(ctx *fasthttp.RequestCtx) {
 		start := time.Now()
 
-		handler(ctx)
+		defer track(ctx, start, name)
 
-		log.Printf(
-			"%s\t%s\t%s\t%s",
-			string(ctx.Method()),
-			string(ctx.RequestURI()),
-			name,
-			time.Since(start),
-		)
+		handler(ctx)
 	})
+}
+
+func track(ctx *fasthttp.RequestCtx, start time.Time, name string) {
+	log.Printf(
+		"%s\t%s\t%s\t%s",
+		string(ctx.Method()),
+		string(ctx.RequestURI()),
+		name,
+		time.Since(start),
+	)
 }

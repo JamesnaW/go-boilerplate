@@ -1,8 +1,8 @@
 package route
 
 import (
-	"github.com/JamesnaW/boilerplate/handlers"
-	"github.com/JamesnaW/boilerplate/models"
+	"github.com/JamesnaW/go-boilerplate/handlers"
+	"github.com/JamesnaW/go-boilerplate/models"
 )
 
 func Todo() model.Routes {
