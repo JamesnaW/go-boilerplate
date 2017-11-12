@@ -1,0 +1,41 @@
+hash: 8bb7ea69e03eeb5f8f6ef393f92716467931821a90a93d46b74ccd4b1eabe664
+updated: 2017-11-12T15:48:58.188727+07:00
+imports:
+- name: github.com/buaazp/fasthttprouter
+  version: 29a27c70315770a2344e11847de85648512717e7
+- name: github.com/go-sql-driver/mysql
+  version: fade21009797158e7b79e04c340118a9220c6f9e
+- name: github.com/gocql/gocql
+  version: 33a5f3c1bcc2c421b3221c5858312afb141bf605
+  subpackages:
+  - internal/lru
+  - internal/murmur
+  - internal/streams
+- name: github.com/golang/snappy
+  version: 553a641470496b2327abcac10b36396bd98e45c9
+- name: github.com/hailocab/go-hostpool
+  version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
+- name: github.com/JamesnaW/go-boilerplate
+  version: f17572f2cd13cbc191610652115717f41d48bff4
+  subpackages:
+  - config
+- name: github.com/julienschmidt/httprouter
+  version: e1b9828bc9e5904baec057a154c09ca40fe7fae0
+- name: github.com/klauspost/compress
+  version: ea08389e0dc46025380296f7dd04ab0e8de36adb
+  subpackages:
+  - flate
+  - gzip
+  - zlib
+- name: github.com/klauspost/cpuid
+  version: ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasthttp
+  version: 51bb00256c3cb0a130d470a087a98684ce003065
+  subpackages:
+  - fasthttputil
+  - stackless
+- name: gopkg.in/inf.v0
+  version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
+testImports: []
