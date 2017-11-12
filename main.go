@@ -6,10 +6,10 @@ import (
 
 	"github.com/valyala/fasthttp"
 
-	c "github.com/timeff/go-boilerplate/config"
-	"github.com/timeff/go-boilerplate/routes"
-	// "github.com/timeff/go-boilerplate/cassandra"
-	// "github.com/timeff/go-boilerplate/mysql"
+	c "github.com/JamesnaW/go-boilerplate/config"
+	"github.com/JamesnaW/go-boilerplate/routes"
+	// "github.com/JamesnaW/go-boilerplate/cassandra"
+	// "github.com/JamesnaW/go-boilerplate/mysql"
 )
 
 func main() {
