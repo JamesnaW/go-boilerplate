@@ -4,8 +4,8 @@ import (
 	"github.com/buaazp/fasthttprouter"
 	"github.com/valyala/fasthttp"
 
-	"github.com/timeff/go-boilerplate/middlewares"
-	"github.com/timeff/go-boilerplate/models"
+	"github.com/JamesnaW/go-boilerplate/middlewares"
+	"github.com/JamesnaW/go-boilerplate/models"
 )
 
 var routes model.Routes = concatRoute(
