@@ -4,8 +4,9 @@ import (
 	"github.com/buaazp/fasthttprouter"
 	"github.com/valyala/fasthttp"
 
-	"github.com/JamesnaW/go-boilerplate/middlewares"
-	"github.com/JamesnaW/go-boilerplate/models"
+	"github.com/timeff/go-boilerplate/middlewares"
+	"github.com/timeff/go-boilerplate/midtime"
+	"github.com/timeff/go-boilerplate/models"
 )
 
 var routes model.Routes = concatRoute(
@@ -17,8 +18,9 @@ func NewFastRouter() *fasthttprouter.Router {
 
 	for _, route := range routes {
 		var handler fasthttp.RequestHandler
-		handler = route.HandlerFunc
-		handler = middleware.LoggerFastHttp(handler, route.Name)
+		handler = midtime.Chain([]midtime.Middleware{
+			middleware.LoggerFastHttp(route.Name),
+		}, route.HandlerFunc)
 
 		router.Handle(route.Method, route.Pattern, handler)
 	}

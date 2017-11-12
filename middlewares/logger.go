@@ -25,14 +25,15 @@ func LoggerHttprouter(handler httprouter.Handle, name string) httprouter.Handle 
 	})
 }
 
-func LoggerFastHttp(handler fasthttp.RequestHandler, name string) fasthttp.RequestHandler {
-	return (func(ctx *fasthttp.RequestCtx) {
-		start := time.Now()
+func LoggerFastHttp(name string) func(handler fasthttp.RequestHandler) fasthttp.RequestHandler {
+	return func(handler fasthttp.RequestHandler) fasthttp.RequestHandler {
+		return func(ctx *fasthttp.RequestCtx) {
+			start := time.Now()
 
-		defer track(ctx, start, name)
-
-		handler(ctx)
-	})
+			defer track(ctx, start, name)
+			handler(ctx)
+		}
+	}
 }
 
 func track(ctx *fasthttp.RequestCtx, start time.Time, name string) {

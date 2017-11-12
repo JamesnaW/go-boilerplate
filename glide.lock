@@ -15,7 +15,7 @@ imports:
   version: 553a641470496b2327abcac10b36396bd98e45c9
 - name: github.com/hailocab/go-hostpool
   version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
-- name: github.com/JamesnaW/go-boilerplate
+- name: github.com/timeff/go-boilerplate
   version: f17572f2cd13cbc191610652115717f41d48bff4
   subpackages:
   - config
