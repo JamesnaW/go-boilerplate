@@ -71,17 +71,6 @@
   version = "v1.1"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/timeff/go-boilerplate"
-  packages = [
-    "handlers",
-    "middlewares",
-    "midtime",
-    "models"
-  ]
-  revision = "8648bb2d0a9de7669c1b1406a6a7c5739225b654"
-
-[[projects]]
   name = "github.com/valyala/fasthttp"
   packages = [
     ".",
@@ -99,6 +88,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4f81765b001930521fc0d0eb92d95ffe96784c8fc30e86ed256d7af4a806ac69"
+  inputs-digest = "8712627b833d371505e17139c296e216b8b2deba271ee7ed1a3baa7d3d754c52"
   solver-name = "gps-cdcl"
   solver-version = 1
