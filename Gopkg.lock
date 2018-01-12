@@ -71,15 +71,10 @@
   version = "v1.1"
 
 [[projects]]
-  branch = "master"
-  name = "github.com/timeff/go-boilerplate"
-  packages = [
-    "handlers",
-    "middlewares",
-    "midtime",
-    "models"
-  ]
-  revision = "8648bb2d0a9de7669c1b1406a6a7c5739225b654"
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  revision = "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
+  version = "v1.0.4"
 
 [[projects]]
   name = "github.com/valyala/fasthttp"
@@ -91,6 +86,21 @@
   version = "v20160617"
 
 [[projects]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  revision = "5f55bce93ad2c89f411e009659bb1fd83da36e7b"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = [
+    "unix",
+    "windows"
+  ]
+  revision = "810d7000345868fc619eb81f46307107118f4ae1"
+
+[[projects]]
   name = "gopkg.in/inf.v0"
   packages = ["."]
   revision = "3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4"
@@ -99,6 +109,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4f81765b001930521fc0d0eb92d95ffe96784c8fc30e86ed256d7af4a806ac69"
+  inputs-digest = "fe9d6b721e76c0c47b1122600fd7a8a9c1983283f8f1e85917722c8621615352"
   solver-name = "gps-cdcl"
   solver-version = 1
