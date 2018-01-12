@@ -3,7 +3,7 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	c "github.com/timeff/go-boilerplate/config"
+	c "go-boilerplate/config"
 
 	_ "github.com/go-sql-driver/mysql"
 )

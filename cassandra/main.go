@@ -2,7 +2,7 @@ package cassandra
 
 import (
 	"fmt"
-	c "github.com/timeff/go-boilerplate/config"
+	c "go-boilerplate/config"
 
 	"github.com/gocql/gocql"
 )

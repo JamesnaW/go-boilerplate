@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/timeff/go-boilerplate/models"
+	"go-boilerplate/models"
+
 	"github.com/valyala/fasthttp"
 )
 
