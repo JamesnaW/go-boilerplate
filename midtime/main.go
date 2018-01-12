@@ -1,7 +1,8 @@
 package midtime
 
 import (
-	"fmt"
+	"go-boilerplate/klogl"
+
 	"github.com/valyala/fasthttp"
 )
 
@@ -10,7 +11,7 @@ type Middleware func(fasthttp.RequestHandler) fasthttp.RequestHandler
 func Chain(mdList []Middleware, h fasthttp.RequestHandler) fasthttp.RequestHandler {
 	if h == nil {
 		h = func(ctx *fasthttp.RequestCtx) {
-			fmt.Println("Error: no last handler")
+			klogl.Log.Fatalln("No Last Handler on Chain routing")
 		}
 	}
 

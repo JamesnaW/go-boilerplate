@@ -71,6 +71,12 @@
   version = "v1.1"
 
 [[projects]]
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  revision = "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
+  version = "v1.0.4"
+
+[[projects]]
   name = "github.com/valyala/fasthttp"
   packages = [
     ".",
@@ -78,6 +84,21 @@
   ]
   revision = "d42167fd04f636e20b005e9934159e95454233c7"
   version = "v20160617"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  revision = "5f55bce93ad2c89f411e009659bb1fd83da36e7b"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = [
+    "unix",
+    "windows"
+  ]
+  revision = "810d7000345868fc619eb81f46307107118f4ae1"
 
 [[projects]]
   name = "gopkg.in/inf.v0"
@@ -88,6 +109,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8712627b833d371505e17139c296e216b8b2deba271ee7ed1a3baa7d3d754c52"
+  inputs-digest = "fe9d6b721e76c0c47b1122600fd7a8a9c1983283f8f1e85917722c8621615352"
   solver-name = "gps-cdcl"
   solver-version = 1
