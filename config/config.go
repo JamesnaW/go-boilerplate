@@ -3,8 +3,11 @@ package config
 import (
 	"flag"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
+
+	"github.com/joho/godotenv"
 )
 
 ///// Config with Flag /////
@@ -28,9 +31,15 @@ var (
 )
 
 func init() {
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	port, _ = strconv.Atoi(os.Getenv("PORT"))
 	name = os.Getenv("PROJECT")
-	cassandraHost = os.Getenv("PROJECT")
+	cassandraHost = os.Getenv("CASSANDRAHOST")
 	mysqlHost = os.Getenv("MYSQLHOST")
 	mysqlUser = os.Getenv("MYSQLUSER")
 	mysqlPassword = os.Getenv("MYSQLPASSWORD")

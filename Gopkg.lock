@@ -37,6 +37,12 @@
   revision = "e80d13ce29ede4452c43dea11e79b9bc8a15b478"
 
 [[projects]]
+  name = "github.com/joho/godotenv"
+  packages = ["."]
+  revision = "a79fa1e548e2c689c241d10173efd51e5d689d5b"
+  version = "v1.2.0"
+
+[[projects]]
   name = "github.com/julienschmidt/httprouter"
   packages = ["."]
   revision = "8c199fb6259ffc1af525cc3ad52ee60ba8359669"
@@ -93,6 +99,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8de2a68a80bd655e26cc3ae482c345a3d9c14d78e0c7c7aaaf4cdcfaf0f60ae5"
+  inputs-digest = "4f81765b001930521fc0d0eb92d95ffe96784c8fc30e86ed256d7af4a806ac69"
   solver-name = "gps-cdcl"
   solver-version = 1

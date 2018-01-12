@@ -43,3 +43,7 @@
 [[constraint]]
   name = "github.com/valyala/fasthttp"
   version = "20160617.0.0"
+
+[[constraint]]
+  name = "github.com/joho/godotenv"
+  version = "1.2.0"
