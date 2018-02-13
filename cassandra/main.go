@@ -1,8 +1,8 @@
 package cassandra
 
 import (
-	"fmt"
-	c "github.com/JamesnaW/go-boilerplate/config"
+	c "go-boilerplate/config"
+	"go-boilerplate/klogl"
 
 	"github.com/gocql/gocql"
 )
@@ -12,14 +12,15 @@ var Session *gocql.Session
 func init() {
 	var err error
 
-	cluster := gocql.NewCluster(c.CassandraHost)
+	cluster := gocql.NewCluster(c.AppConfig.CassandraHost)
 	// cluster.Keyspace = "keyspace"
 	// cluster.Keyspace = "users"
 	Session, err = cluster.CreateSession()
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("Cassandra init done")
+
+	klogl.Log.Infoln("Cassandra has been initialized")
 }
 
 type Todos []interface{}

@@ -3,25 +3,27 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	c "github.com/JamesnaW/go-boilerplate/config"
 
 	_ "github.com/go-sql-driver/mysql"
+
+	c "go-boilerplate/config"
+	"go-boilerplate/klogl"
 )
 
 var Session *sql.DB
 
 func init() {
 	var err error
-	Session, err = sql.Open("mysql", fmt.Sprintf("%v:%v@%v(%v)/", c.MysqlUser, c.MysqlPassword, c.MysqlProtocol, c.MysqlHost))
+	Session, err = sql.Open("mysql", fmt.Sprintf("%v:%v@%v(%v)/", c.AppConfig.MysqlUser, c.AppConfig.MysqlPassword, c.AppConfig.MysqlProtocol, c.AppConfig.MysqlHost))
 	if err != nil {
-		panic(err)
+		klogl.Log.Fatalf("Can't connect to MySQL Database: %v", err)
 	}
 	err = Session.Ping()
 	if err != nil {
-		fmt.Println(err.Error())
+		klogl.Log.Fatalf("Can't ping to MySQL Database: %v", err)
 	}
 
-	fmt.Println("Mysql init done")
+	klogl.Log.Infoln("Mysql has been initialized")
 }
 
 type Todo struct {

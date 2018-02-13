@@ -1,10 +1,10 @@
 {
-    "WorkingDir": "{GOPATH}/src/github.com/timeff/go-boilerplate",
+    "WorkingDir": "{GOPATH}/src/go-boilerplate",
     "SourceDir": [
-        "{GOPATH}/src/github.com/timeff/go-boilerplate"
+        "{GOPATH}/src/go-boilerplate"
     ],
     "SourceExt": [".c", ".cpp", ".go", ".h"],
-    "BuildCmd": "go install github.com/timeff/go-boilerplate",
+    "BuildCmd": "go install go-boilerplate",
     "RunCmd": "go-boilerplate",
     "Decreasing": 1
 }

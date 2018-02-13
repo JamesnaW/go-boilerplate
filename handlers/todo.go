@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/JamesnaW/go-boilerplate/models"
+	"go-boilerplate/models"
+
 	"github.com/valyala/fasthttp"
 )
 
@@ -23,6 +24,7 @@ func TodoShow(ctx *fasthttp.RequestCtx) {
 	todoID := ctx.UserValue("param")
 	query := ctx.FormValue("q")
 	fmt.Fprintf(ctx, "Todo show: %s", todoID)
+
 	if query != nil {
 		fmt.Fprintf(ctx, ", Query string: %s", string(query))
 	}

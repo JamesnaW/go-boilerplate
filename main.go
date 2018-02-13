@@ -2,24 +2,16 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/valyala/fasthttp"
 
-	c "github.com/JamesnaW/go-boilerplate/config"
-	"github.com/JamesnaW/go-boilerplate/routes"
-	// "github.com/JamesnaW/go-boilerplate/cassandra"
-	// "github.com/JamesnaW/go-boilerplate/mysql"
+	c "go-boilerplate/config"
+	"go-boilerplate/klogl"
+	"go-boilerplate/routes"
 )
 
 func main() {
-	// CassandraSession := cassandra.Session
-	// defer CassandraSession.Close()
-
-	// MysqlSession := mysql.Session
-	// defer MysqlSession.Close()
-
 	router := route.NewFastRouter()
-	port := fmt.Sprintf(":%v", c.Port)
-	log.Fatal(fasthttp.ListenAndServe(port, router.Handler))
+	port := fmt.Sprintf(":%v", c.AppConfig.Port)
+	klogl.Log.Fatal(fasthttp.ListenAndServe(port, router.Handler))
 }
